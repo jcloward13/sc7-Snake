@@ -17,7 +17,6 @@ class Snake:
         Args:
             self (Snake): An instance of snake.
         """
-        super().__init__()
         self._segments = []
         self._prepare_body()
     
@@ -62,7 +61,7 @@ class Snake:
         """
         tail = self._segments[-1]
         offset = tail.get_velocity().reverse()
-        text = "#"
+        text = "+"
         position = tail.get_position().add(offset)
         velocity = tail.get_velocity()
         self._add_segment(text, position, velocity)
@@ -109,7 +108,7 @@ class Snake:
         x = int(constants.MAX_X / 2)
         y = int(constants.MAX_Y / 2)
         for n in range(constants.SNAKE_LENGTH):
-            text = "8" if n == 0 else "#"
+            text = "☢︎" if n == 0 else "+"
             position = Point(x - n, y)
             velocity = Point(1, 0)
             self._add_segment(text, position, velocity)
