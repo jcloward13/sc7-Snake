@@ -40,4 +40,3 @@ root                    (project root folder)
 ## Authors
 ---
 * Jacob Cloward: jacobcloward@yahoo.com
-# sc7-Snake
